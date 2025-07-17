@@ -1,0 +1,22 @@
+### Arquivo para testar APIs localmente
+### Use com extensão REST Client do VS Code
+
+### 1. Registrar novo usuário
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Teste Local",
+  "email": "teste@local.com",
+  "password": "123456",
+  "role": "USER"
+}
+
+### 2. Listar usuários (precisa estar logado como ADMIN)
+GET http://localhost:3000/api/users
+
+### 3. Testar rota protegida
+GET http://localhost:3000/dashboard
+
+### 4. Testar rota admin
+GET http://localhost:3000/admin
